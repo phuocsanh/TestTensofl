@@ -10,6 +10,7 @@ import {
 import {
   Camera,
   useCameraDevice,
+  useCameraPermission,
   useFrameProcessor,
 } from 'react-native-vision-camera';
 import {
@@ -21,9 +22,11 @@ import {
   requestNotifications,
 } from 'react-native-permissions';
 import poseDetection from '@tensorflow-models/pose-detection';
+import React from 'react';
+import {runOnJS} from 'react-native-reanimated';
+
 export default function CameraScreen() {
-  const device = useCameraDevice('back');
-  console.log('🚀 ~ CameraScreen ~ device:', device);
+  const device = useCameraDevice('front');
   const cameraRef = useRef<Camera>(null);
   const [model, setModel] = useState<any>(null);
   const [next, setNext] = useState<any>(false);
@@ -31,7 +34,8 @@ export default function CameraScreen() {
   const [referencePose, setReferencePose] = useState<any>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
   console.log('🚀 ~ CameraScreen ~ isCameraReady:', isCameraReady);
-
+  const {hasPermission, requestPermission} = useCameraPermission();
+  console.log('🚀 ~ CameraScreen ~ hasPermission:', hasPermission);
   useEffect(() => {
     const prepareCamera = async () => {
       try {
@@ -44,9 +48,10 @@ export default function CameraScreen() {
     prepareCamera();
   }, []);
   useEffect(() => {
-    loadModel();
+    // loadModel();
   }, []);
   const takeReferenceImage = async () => {
+    setNext(true);
     if (cameraRef.current) {
       console.log('🚀 ~ takeReferenceImage ~ cameraRef.current:');
       const photo = await cameraRef.current.takePhoto().catch(e => {
@@ -57,12 +62,12 @@ export default function CameraScreen() {
       // console.log('Reference Image:', photo.path);
     }
   };
-  const loadModel = async () => {
-    const poseModel = await poseDetection.createDetector(
-      poseDetection.SupportedModels.BlazePose,
-    );
-    setModel(poseModel);
-  };
+  // const loadModel = async () => {
+  //   const poseModel = await poseDetection.createDetector(
+  //     poseDetection.SupportedModels.BlazePose,
+  //   );
+  //   setModel(poseModel);
+  // };
 
   const detectPose = async (imageData: any) => {
     if (model) {
@@ -80,10 +85,13 @@ export default function CameraScreen() {
     }
   };
   const frameProcessor = useFrameProcessor(frame => {
-    'worklet';
-    const objects = detectPose(frame);
-    const label = objects;
-    console.log(`You're looking at a ${label}.`);
+    ('worklet');
+
+    const processFrame = (frameData: any) => {
+      console.log('Processing frame on JS thread:', frameData);
+    };
+
+    runOnJS(processFrame)(frame);
   }, []);
 
   const comparePoses = (currentPose: any, referencePose: any) => {
@@ -114,46 +122,64 @@ export default function CameraScreen() {
 
   return (
     <View style={styles.container}>
-      <View>
-        <Text style={styles.message}>
-          We need your permission to show the camera
-        </Text>
-        <Button
-          onPress={() =>
-            _request(
-              Platform.OS === 'ios'
-                ? 'ios.permission.CAMERA'
-                : 'android.permission.CAMERA',
-            )
-          }
-          title="grant permission"
-        />
+      {!hasPermission && (
+        <View>
+          <Text style={styles.message}>
+            We need your permission to show the camera
+          </Text>
+          <Button
+            onPress={() =>
+              _request(
+                Platform.OS === 'ios'
+                  ? 'ios.permission.CAMERA'
+                  : 'android.permission.CAMERA',
+              )
+            }
+            title="grant permission"
+          />
+        </View>
+      )}
+      <View style={{flex: 0.2}}>
+        {!next ? (
+          <Pressable style={{marginTop: 40}} onPress={takeReferenceImage}>
+            <Text>Chụp ảnh mẫu</Text>
+          </Pressable>
+        ) : (
+          <Pressable style={{marginTop: 40}} onPress={() => setNext(true)}>
+            <Text>Next</Text>
+          </Pressable>
+        )}
       </View>
-      {device && isCameraReady && (
-        <>
-          <Camera device={device} isActive ref={cameraRef} photo />
-          {/* {next ? (
+      <View style={{flex: 1}}>
+        {device != null && hasPermission && (
+          <>
             <Camera
+              style={StyleSheet.absoluteFillObject}
               frameProcessor={frameProcessor}
               device={device}
               isActive
               ref={cameraRef}
             />
-          ) : (
-            <Camera device={device} isActive ref={cameraRef} photo />
-          )}
-        
-          {!next ? (
-            <Pressable style={{marginTop: 40}} onPress={takeReferenceImage}>
-              <Text>Chụp ảnh mẫu</Text>
-            </Pressable>
-          ) : (
-            <Pressable style={{marginTop: 40}} onPress={() => setNext(true)}>
-              <Text>Next</Text>
-            </Pressable>
-          )} */}
-        </>
-      )}
+            {/* {next ? (
+              <Camera
+                style={StyleSheet.absoluteFillObject}
+                frameProcessor={frameProcessor}
+                device={device}
+                isActive
+                ref={cameraRef}
+              />
+            ) : (
+              <Camera
+                style={StyleSheet.absoluteFillObject}
+                device={device}
+                isActive
+                ref={cameraRef}
+                photo
+              />
+            )} */}
+          </>
+        )}
+      </View>
     </View>
   );
 }
