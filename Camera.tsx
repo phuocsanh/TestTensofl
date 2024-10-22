@@ -23,7 +23,8 @@ import {
 } from 'react-native-permissions';
 import poseDetection from '@tensorflow-models/pose-detection';
 import React from 'react';
-
+import {runOnJS, runOnUI} from 'react-native-reanimated';
+import {Worklets} from 'react-native-worklets-core';
 export default function CameraScreen() {
   const device = useCameraDevice('front');
   const cameraRef = useRef<Camera>(null);
@@ -46,9 +47,7 @@ export default function CameraScreen() {
 
     prepareCamera();
   }, []);
-  useEffect(() => {
-    // loadModel();
-  }, []);
+
   const takeReferenceImage = async () => {
     setNext(true);
     if (cameraRef.current) {
@@ -68,10 +67,15 @@ export default function CameraScreen() {
     setModel(poseModel);
   };
 
+  useEffect(() => {
+    loadModel();
+  }, []);
+
   const detectPose = async (imageData: any) => {
+    console.log('🚀 ~ detectPose ~ model:', model);
+
     if (model) {
       const poses = await model.estimatePoses(imageData);
-
       // So sánh tư thế hiện tại với hình mẫu
       if (referenceImage) {
         const isMatching = comparePoses(poses, referencePose);
@@ -83,9 +87,12 @@ export default function CameraScreen() {
       }
     }
   };
+
+  const myFunctionJS = Worklets.createRunInJsFn(detectPose);
   const frameProcessor = useFrameProcessor(frame => {
     'worklet';
     console.log(`Frame: ${frame.width}x${frame.height} (${frame.pixelFormat})`);
+    myFunctionJS(frame);
   }, []);
 
   const comparePoses = (currentPose: any, referencePose: any) => {
