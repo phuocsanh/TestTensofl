@@ -23,7 +23,6 @@ import {
 } from 'react-native-permissions';
 import poseDetection from '@tensorflow-models/pose-detection';
 import React from 'react';
-import {runOnJS} from 'react-native-reanimated';
 
 export default function CameraScreen() {
   const device = useCameraDevice('front');
@@ -62,12 +61,12 @@ export default function CameraScreen() {
       // console.log('Reference Image:', photo.path);
     }
   };
-  // const loadModel = async () => {
-  //   const poseModel = await poseDetection.createDetector(
-  //     poseDetection.SupportedModels.BlazePose,
-  //   );
-  //   setModel(poseModel);
-  // };
+  const loadModel = async () => {
+    const poseModel = await poseDetection.createDetector(
+      poseDetection.SupportedModels.BlazePose,
+    );
+    setModel(poseModel);
+  };
 
   const detectPose = async (imageData: any) => {
     if (model) {
@@ -85,13 +84,8 @@ export default function CameraScreen() {
     }
   };
   const frameProcessor = useFrameProcessor(frame => {
-    ('worklet');
-
-    const processFrame = (frameData: any) => {
-      console.log('Processing frame on JS thread:', frameData);
-    };
-
-    runOnJS(processFrame)(frame);
+    'worklet';
+    console.log(`Frame: ${frame.width}x${frame.height} (${frame.pixelFormat})`);
   }, []);
 
   const comparePoses = (currentPose: any, referencePose: any) => {

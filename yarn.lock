@@ -740,7 +740,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-arrow-functions@npm:^7.0.0, @babel/plugin-transform-arrow-functions@npm:^7.0.0-0, @babel/plugin-transform-arrow-functions@npm:^7.25.7":
+"@babel/plugin-transform-arrow-functions@npm:^7.0.0, @babel/plugin-transform-arrow-functions@npm:^7.25.7":
   version: 7.25.7
   resolution: "@babel/plugin-transform-arrow-functions@npm:7.25.7"
   dependencies:
@@ -799,7 +799,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-class-properties@npm:^7.0.0-0, @babel/plugin-transform-class-properties@npm:^7.25.7":
+"@babel/plugin-transform-class-properties@npm:^7.25.7":
   version: 7.25.7
   resolution: "@babel/plugin-transform-class-properties@npm:7.25.7"
   dependencies:
@@ -823,7 +823,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-classes@npm:^7.0.0, @babel/plugin-transform-classes@npm:^7.0.0-0, @babel/plugin-transform-classes@npm:^7.25.7":
+"@babel/plugin-transform-classes@npm:^7.0.0, @babel/plugin-transform-classes@npm:^7.25.7":
   version: 7.25.7
   resolution: "@babel/plugin-transform-classes@npm:7.25.7"
   dependencies:
@@ -1086,7 +1086,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-nullish-coalescing-operator@npm:^7.0.0-0, @babel/plugin-transform-nullish-coalescing-operator@npm:^7.25.8":
+"@babel/plugin-transform-nullish-coalescing-operator@npm:^7.25.8":
   version: 7.25.8
   resolution: "@babel/plugin-transform-nullish-coalescing-operator@npm:7.25.8"
   dependencies:
@@ -1144,7 +1144,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-optional-chaining@npm:^7.0.0-0, @babel/plugin-transform-optional-chaining@npm:^7.25.7, @babel/plugin-transform-optional-chaining@npm:^7.25.8":
+"@babel/plugin-transform-optional-chaining@npm:^7.25.7, @babel/plugin-transform-optional-chaining@npm:^7.25.8":
   version: 7.25.8
   resolution: "@babel/plugin-transform-optional-chaining@npm:7.25.8"
   dependencies:
@@ -1290,7 +1290,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-shorthand-properties@npm:^7.0.0, @babel/plugin-transform-shorthand-properties@npm:^7.0.0-0, @babel/plugin-transform-shorthand-properties@npm:^7.25.7":
+"@babel/plugin-transform-shorthand-properties@npm:^7.0.0, @babel/plugin-transform-shorthand-properties@npm:^7.25.7":
   version: 7.25.7
   resolution: "@babel/plugin-transform-shorthand-properties@npm:7.25.7"
   dependencies:
@@ -1324,7 +1324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-template-literals@npm:^7.0.0, @babel/plugin-transform-template-literals@npm:^7.0.0-0, @babel/plugin-transform-template-literals@npm:^7.25.7":
+"@babel/plugin-transform-template-literals@npm:^7.0.0, @babel/plugin-transform-template-literals@npm:^7.25.7":
   version: 7.25.7
   resolution: "@babel/plugin-transform-template-literals@npm:7.25.7"
   dependencies:
@@ -1384,7 +1384,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-unicode-regex@npm:^7.0.0, @babel/plugin-transform-unicode-regex@npm:^7.0.0-0, @babel/plugin-transform-unicode-regex@npm:^7.25.7":
+"@babel/plugin-transform-unicode-regex@npm:^7.0.0, @babel/plugin-transform-unicode-regex@npm:^7.25.7":
   version: 7.25.7
   resolution: "@babel/plugin-transform-unicode-regex@npm:7.25.7"
   dependencies:
@@ -1512,7 +1512,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.13.0, @babel/preset-typescript@npm:^7.16.7":
+"@babel/preset-typescript@npm:^7.13.0":
   version: 7.25.7
   resolution: "@babel/preset-typescript@npm:7.25.7"
   dependencies:
@@ -2483,55 +2483,55 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-backend-cpu@npm:4.21.0":
-  version: 4.21.0
-  resolution: "@tensorflow/tfjs-backend-cpu@npm:4.21.0"
+"@tensorflow/tfjs-backend-cpu@npm:4.22.0":
+  version: 4.22.0
+  resolution: "@tensorflow/tfjs-backend-cpu@npm:4.22.0"
   dependencies:
     "@types/seedrandom": ^2.4.28
     seedrandom: ^3.0.5
   peerDependencies:
-    "@tensorflow/tfjs-core": 4.21.0
-  checksum: 43ee7e5e8f3d37e91c6248555b80f697dcb294638fdd17314ddedfcdfa9086d19b101555b2c35d2a41eaa5407e11ad4612b929488e832c252a5c1af3a6b97b2e
+    "@tensorflow/tfjs-core": 4.22.0
+  checksum: afa375b7d752e145fee025270f2c848504987cf8e54f787736bfde968853428c0c8e4539205beee4c59443459c0a4cd150021aa613b48f40547987a94c7d7e04
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-backend-webgl@npm:4.21.0":
-  version: 4.21.0
-  resolution: "@tensorflow/tfjs-backend-webgl@npm:4.21.0"
+"@tensorflow/tfjs-backend-webgl@npm:4.22.0":
+  version: 4.22.0
+  resolution: "@tensorflow/tfjs-backend-webgl@npm:4.22.0"
   dependencies:
-    "@tensorflow/tfjs-backend-cpu": 4.21.0
+    "@tensorflow/tfjs-backend-cpu": 4.22.0
     "@types/offscreencanvas": ~2019.3.0
     "@types/seedrandom": ^2.4.28
     seedrandom: ^3.0.5
   peerDependencies:
-    "@tensorflow/tfjs-core": 4.21.0
-  checksum: 940d874a3ab2fadebe07394813bea44bf2adf149212b4ce08d0bf0f3c6bcd9d225338abc512cdd5fac009398fa874ea7acd4d5b5d8ad89af06ea459fc31edf27
+    "@tensorflow/tfjs-core": 4.22.0
+  checksum: 16da253bc53e3ac97f6da40257794f24e7831ee7e362be397c8c004084ab2db25f7803bfee0d9b57d60961ce1146f2dc9c94b26570c5f8cfd7eab2fc89e93f59
   languageName: node
   linkType: hard
 
 "@tensorflow/tfjs-backend-webgpu@npm:^4.21.0":
-  version: 4.21.0
-  resolution: "@tensorflow/tfjs-backend-webgpu@npm:4.21.0"
+  version: 4.22.0
+  resolution: "@tensorflow/tfjs-backend-webgpu@npm:4.22.0"
   dependencies:
-    "@tensorflow/tfjs-backend-cpu": 4.21.0
+    "@tensorflow/tfjs-backend-cpu": 4.22.0
   peerDependencies:
-    "@tensorflow/tfjs-core": 4.21.0
-  checksum: b41f88621ff9d535de58c5ddd37944392c43ff36abaaa4b97e5e4e8847b12a6c80a6c6bce00a8ee33bf7c3ff0b2bfb1b0027d5bbabf5394e6856f9b6829c7c63
+    "@tensorflow/tfjs-core": 4.22.0
+  checksum: da9f3c3db9a78d5e6c3c332cd33716bc6b7dbc6fdc0237bf899587936c07a1f483da9ffc43ffad86ee9f7af8619cab7c421c2de9bd2f9c128a185e462b6ae9da
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-converter@npm:4.21.0":
-  version: 4.21.0
-  resolution: "@tensorflow/tfjs-converter@npm:4.21.0"
+"@tensorflow/tfjs-converter@npm:4.22.0":
+  version: 4.22.0
+  resolution: "@tensorflow/tfjs-converter@npm:4.22.0"
   peerDependencies:
-    "@tensorflow/tfjs-core": 4.21.0
-  checksum: ca20c9cc2c5ebf1555f3159e67b7226770d334c1af14ea5517d77335c183f20f9534f61ee00d3974b823d3758e312726301156896b054b1b9f2614b32878aea8
+    "@tensorflow/tfjs-core": 4.22.0
+  checksum: 918d3e11eed19cda41f785a3964619bfeeb40da6c3ad24a5028ac71c2abeaab7e201778bdbed94545e4b08931a08ff194bfecfde1131cf5c4837a0818e2cd508
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-core@npm:4.21.0":
-  version: 4.21.0
-  resolution: "@tensorflow/tfjs-core@npm:4.21.0"
+"@tensorflow/tfjs-core@npm:4.22.0":
+  version: 4.22.0
+  resolution: "@tensorflow/tfjs-core@npm:4.22.0"
   dependencies:
     "@types/long": ^4.0.1
     "@types/offscreencanvas": ~2019.7.0
@@ -2540,30 +2540,30 @@ __metadata:
     long: 4.0.0
     node-fetch: ~2.6.1
     seedrandom: ^3.0.5
-  checksum: b6863b88d80ab76fb1b70a1d4b46f8422a0ed1b2f63346d3e7394f8ec49e1d777fb69e133830127385e65ab4fcc5c2ea296cbee29068360901269a6353718f4c
+  checksum: 3efe6fc6020911ea06e387bc7228e73bb4bb33e2440c7a970369be8952ba3ac3f4ef5a3cd78a2e382702de0a3b8f097869e4e3a3e7dd65fa93e3f78d15d6b334
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-data@npm:4.21.0":
-  version: 4.21.0
-  resolution: "@tensorflow/tfjs-data@npm:4.21.0"
+"@tensorflow/tfjs-data@npm:4.22.0":
+  version: 4.22.0
+  resolution: "@tensorflow/tfjs-data@npm:4.22.0"
   dependencies:
     "@types/node-fetch": ^2.1.2
     node-fetch: ~2.6.1
     string_decoder: ^1.3.0
   peerDependencies:
-    "@tensorflow/tfjs-core": 4.21.0
+    "@tensorflow/tfjs-core": 4.22.0
     seedrandom: ^3.0.5
-  checksum: 00711072b3aa6e62af70d087b41bc2b8991fdd8e99493c78d9ad4ee8a6705f1c5a13fedee9e9dcb0264b2b32c48efd44a90e7e87e6c99c245f3bac0aca986b98
+  checksum: b20770a79222688f7a1349c0c19fc913424ea095c6d1d329625a4cd4c80a1ff3d988e3a845ab2f2823c72a7990f6b070cbce4e638a42fe4d2385b420477aa36b
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-layers@npm:4.21.0":
-  version: 4.21.0
-  resolution: "@tensorflow/tfjs-layers@npm:4.21.0"
+"@tensorflow/tfjs-layers@npm:4.22.0":
+  version: 4.22.0
+  resolution: "@tensorflow/tfjs-layers@npm:4.22.0"
   peerDependencies:
-    "@tensorflow/tfjs-core": 4.21.0
-  checksum: 9988d7546ada481835dab4a24dfc237040fdb978f37c9d4e067dddbad824349fc58d1cb31f76e2663d603481add3123e20bc9e89ed37ae7d2725f153a7f1e276
+    "@tensorflow/tfjs-core": 4.22.0
+  checksum: 88253be2b91dadb9264303d2260fe6160e753fabf4642c290d26c451385363ce8d0ad150d5a3070e52645d4ba061c2e63b6dda67d3bf3257a36e65ab8fd3d69a
   languageName: node
   linkType: hard
 
@@ -2589,15 +2589,15 @@ __metadata:
   linkType: hard
 
 "@tensorflow/tfjs@npm:^4.21.0":
-  version: 4.21.0
-  resolution: "@tensorflow/tfjs@npm:4.21.0"
+  version: 4.22.0
+  resolution: "@tensorflow/tfjs@npm:4.22.0"
   dependencies:
-    "@tensorflow/tfjs-backend-cpu": 4.21.0
-    "@tensorflow/tfjs-backend-webgl": 4.21.0
-    "@tensorflow/tfjs-converter": 4.21.0
-    "@tensorflow/tfjs-core": 4.21.0
-    "@tensorflow/tfjs-data": 4.21.0
-    "@tensorflow/tfjs-layers": 4.21.0
+    "@tensorflow/tfjs-backend-cpu": 4.22.0
+    "@tensorflow/tfjs-backend-webgl": 4.22.0
+    "@tensorflow/tfjs-converter": 4.22.0
+    "@tensorflow/tfjs-core": 4.22.0
+    "@tensorflow/tfjs-data": 4.22.0
+    "@tensorflow/tfjs-layers": 4.22.0
     argparse: ^1.0.10
     chalk: ^4.1.0
     core-js: 3.29.1
@@ -2605,7 +2605,7 @@ __metadata:
     yargs: ^16.0.3
   bin:
     tfjs-custom-module: dist/tools/custom_module/cli.js
-  checksum: 340875a4ee42f07f4a4b9d7a4ca9ef0f0588298ce8718e9d17cdfa3d7003df51e75eb541bfe99f1e1e5e729edc16423a968bf6a6096aeaf8389604b9f437c5f6
+  checksum: 725afe0b4099ac3aef0d508019b195f4f2bcd3ed6a0384b39ced6113d65698d4f251b7d417ac751a5e5db2b275efccfbd53b495fff04a82459fa548f5085dfac
   languageName: node
   linkType: hard
 
@@ -2723,11 +2723,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 22.7.7
-  resolution: "@types/node@npm:22.7.7"
+  version: 22.7.8
+  resolution: "@types/node@npm:22.7.8"
   dependencies:
     undici-types: ~6.19.2
-  checksum: 70492e46d92bf00b537c8700322ad001c1f8d4fc65fc1627064a91c7edebb8ad18730b95a3c6bdff212dd0252a337a4b92e4cfcbc21c9f08616302e87ea855b8
+  checksum: c1dd36bd0bf82588e61f82edb29a792f21ce902f90cc5485591f9fd60cec3ea9172e044bf7b1c0849e7cf3a5a01da39516db260cb65cb0b94904010e00634a1c
   languageName: node
   linkType: hard
 
@@ -2989,11 +2989,11 @@ __metadata:
     react-native: 0.72.3
     react-native-gesture-handler: 2.20.0
     react-native-permissions: ^5.0.1
-    react-native-reanimated: ^3.5.4
     react-native-vision-camera: 3.6.9
     react-native-worklets-core: 0.2.4
     react-test-renderer: 18.2.0
     typescript: 4.8.4
+    vision-camera-face-detector-plugin: "github:lenhathieu96/vision-camera-face-detector"
   languageName: unknown
   linkType: soft
 
@@ -3567,16 +3567,16 @@ __metadata:
   linkType: hard
 
 "browserslist@npm:^4.23.3, browserslist@npm:^4.24.0":
-  version: 4.24.0
-  resolution: "browserslist@npm:4.24.0"
+  version: 4.24.2
+  resolution: "browserslist@npm:4.24.2"
   dependencies:
-    caniuse-lite: ^1.0.30001663
-    electron-to-chromium: ^1.5.28
+    caniuse-lite: ^1.0.30001669
+    electron-to-chromium: ^1.5.41
     node-releases: ^2.0.18
-    update-browserslist-db: ^1.1.0
+    update-browserslist-db: ^1.1.1
   bin:
     browserslist: cli.js
-  checksum: de200d3eb8d6ed819dad99719099a28fb6ebeb88016a5ac42fbdc11607e910c236a84ca1b0bbf232477d4b88ab64e8ab6aa67557cdd40a73ca9c2834f92ccce0
+  checksum: cf64085f12132d38638f38937a255edb82c7551b164a98577b055dd79719187a816112f7b97b9739e400c4954cd66479c0d7a843cb816e346f4795dc24fd5d97
   languageName: node
   linkType: hard
 
@@ -3692,7 +3692,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001663":
+"caniuse-lite@npm:^1.0.30001669":
   version: 1.0.30001669
   resolution: "caniuse-lite@npm:1.0.30001669"
   checksum: 8ed0c69d0c6aa3b1cbc5ba4e5f5330943e7b7165e257f6955b8b73f043d07ad922265261f2b54d9bbaf02886bbdba5e6f5b16662310a13f91f17035af3212de1
@@ -4265,7 +4265,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.5.28":
+"electron-to-chromium@npm:^1.5.41":
   version: 1.5.41
   resolution: "electron-to-chromium@npm:1.5.41"
   checksum: 942cc53beabeb0647598d432155e2c21bed0de3dfd46576112aeed4157ea59543875c8a99038c5b05e8843fb3b91f14278ed4ea2bf4943845b26456ec20d2c9b
@@ -8501,29 +8501,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:^3.5.4":
-  version: 3.16.1
-  resolution: "react-native-reanimated@npm:3.16.1"
-  dependencies:
-    "@babel/plugin-transform-arrow-functions": ^7.0.0-0
-    "@babel/plugin-transform-class-properties": ^7.0.0-0
-    "@babel/plugin-transform-classes": ^7.0.0-0
-    "@babel/plugin-transform-nullish-coalescing-operator": ^7.0.0-0
-    "@babel/plugin-transform-optional-chaining": ^7.0.0-0
-    "@babel/plugin-transform-shorthand-properties": ^7.0.0-0
-    "@babel/plugin-transform-template-literals": ^7.0.0-0
-    "@babel/plugin-transform-unicode-regex": ^7.0.0-0
-    "@babel/preset-typescript": ^7.16.7
-    convert-source-map: ^2.0.0
-    invariant: ^2.2.4
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-    react: "*"
-    react-native: "*"
-  checksum: 7d969a24558c8dc7fb175610a867091a7dd04fd5998a09f2f02bfba5d7a59eee5918d2ee47722026a4ecbfb81c594dd28843962a7f01282172b478f7d451a909
-  languageName: node
-  linkType: hard
-
 "react-native-vision-camera@npm:3.6.9":
   version: 3.6.9
   resolution: "react-native-vision-camera@npm:3.6.9"
@@ -9898,7 +9875,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"update-browserslist-db@npm:^1.1.0":
+"update-browserslist-db@npm:^1.1.1":
   version: 1.1.1
   resolution: "update-browserslist-db@npm:1.1.1"
   dependencies:
@@ -9959,6 +9936,18 @@ __metadata:
   version: 1.1.2
   resolution: "vary@npm:1.1.2"
   checksum: ae0123222c6df65b437669d63dfa8c36cee20a504101b2fcd97b8bf76f91259c17f9f2b4d70a1e3c6bbcee7f51b28392833adb6b2770b23b01abec84e369660b
+  languageName: node
+  linkType: hard
+
+"vision-camera-face-detector-plugin@github:lenhathieu96/vision-camera-face-detector":
+  version: 0.5.0
+  resolution: "vision-camera-face-detector-plugin@https://github.com/lenhathieu96/vision-camera-face-detector.git#commit=92e7749112ba4f7d9ad01e5e198934f8954c7436"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-vision-camera: ">= 3.6.6"
+    react-native-worklets-core: ">=0.2.4"
+  checksum: 613c025d4aeaa443a4047f37d0b5bd94f50f0f082fd6982aeb2e22c8162ee5d82934e7c7f6da97496aae3fc7781abb106be9b3d8103fb738957ab747431b7a0b
   languageName: node
   linkType: hard
 
