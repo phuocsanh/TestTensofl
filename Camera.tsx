@@ -61,9 +61,8 @@ export default function CameraScreen() {
     }
   };
   const loadModel = async () => {
-    const poseModel = await poseDetection.createDetector(
-      poseDetection.SupportedModels.BlazePose,
-    );
+    const modelInit = poseDetection.SupportedModels.PoseNet;
+    const poseModel = await poseDetection.createDetector(modelInit);
     setModel(poseModel);
   };
 
@@ -89,11 +88,16 @@ export default function CameraScreen() {
   };
 
   const myFunctionJS = Worklets.createRunInJsFn(detectPose);
-  const frameProcessor = useFrameProcessor(frame => {
-    'worklet';
-    console.log(`Frame: ${frame.width}x${frame.height} (${frame.pixelFormat})`);
-    myFunctionJS(frame);
-  }, []);
+  const frameProcessor = useFrameProcessor(
+    frame => {
+      'worklet';
+      console.log(
+        `Frame: ${frame.width}x${frame.height} (${frame.pixelFormat})`,
+      );
+      myFunctionJS(frame);
+    },
+    [model],
+  );
 
   const comparePoses = (currentPose: any, referencePose: any) => {
     // Ví dụ so sánh đơn giản, bạn có thể thay đổi logic so sánh theo nhu cầu
